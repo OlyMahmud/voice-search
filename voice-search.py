@@ -9,9 +9,9 @@ with sr.Microphone() as source:
     audio = r.listen(source)
     try:
         text = r.recognize_google(audio)
-        print("You said:".format(text))
+        print("You said{}:".format(text))
         url = "https://www.google.com/search?q="
         search_url=url+text
         webbrowser.open(search_url)
     except:
-        print("can't recognize")
+        print("can't recognize") 
